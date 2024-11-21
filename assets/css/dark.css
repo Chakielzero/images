@@ -1,0 +1,441 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Transiciones suaves al hacer scroll */
+}
+
+/* Estilos básicos */
+body {
+    font-family: 'Roboto', sans-serif;  /* Fuente moderna */
+    background-color: #1e1e1e;  /* Fondo oscuro estilo gaming */
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para colores */
+}
+
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para el header */
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-family: 'Press Start 2P', cursive; /* Fuente retro estilo arcade */
+    font-size: 1.5em; /* Tamaño reducido */
+    color: #E0E0E0; /* Color claro, puedes ajustar según prefieras */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6), 
+                 0 0 10px rgba(0, 0, 0, 0.4); /* Sombras sutiles para un leve efecto 3D */
+    background: linear-gradient(45deg, #E0E0E0, #B0B0B0); /* Gradiente sutil de colores claros */
+    -webkit-background-clip: text; /* Hace que el fondo sea visible solo en el texto */
+    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
+    padding: 5px; /* Espaciado interno */
+    margin: 0; /* Alineación a la izquierda, quita márgenes si es necesario */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+h2 {
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+
+#main-image img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    border-bottom: 5px solid #ff1e56; /* Barra inferior roja estilo gaming */
+}
+
+/* Sección de introducción */
+.intro {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-top: 2px solid #ff1e56;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(255, 30, 86, 0.2); /* Sombra sutil */
+}
+
+/* Sección de galería de juegos */
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.game {
+    width: 90%;  /* Ancho relativo al tamaño del dispositivo */
+    max-width: 400px;
+    text-align: center;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 15px;  /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos suaves */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game:hover {
+    transform: scale(1.05);  /* Efecto de agrandamiento al pasar el mouse */
+    box-shadow: 0 12px 25px rgba(255, 30, 86, 0.4);  /* Sombra más intensa al hacer hover */
+}
+
+.game img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 30, 86, 0.2); /* Sombra estilo gamer */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos de transición para las imágenes */
+}
+
+.game img:hover {
+    transform: scale(1.02); /* Efecto de zoom leve en la imagen */
+    box-shadow: 0 8px 16px rgba(255, 30, 86, 0.4); /* Sombra más grande al hacer hover */
+}
+
+.game p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff1e56;  /* Texto en color gaming */
+    margin-bottom: 10px;
+}
+
+.game button {
+    background-color: #ff1e56;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos suaves */
+}
+
+.game button:hover {
+    background-color: #ff4d79; /* Color más claro al hacer hover */
+    transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+}
+
+/* Input de búsqueda - Contenedor */
+#search {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input de búsqueda */
+#search-input {
+    padding: 15px;
+    width: 80%;
+    max-width: 450px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #c79810; /* Borde dorado */
+    background-color: #1c1c1c; /* Fondo oscuro para gaming */
+    color: #f0e68c; /* Color dorado suave para el texto */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 10px rgba(199, 152, 16, 0.7); /* Sombra 3D */
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif; /* Fuente legible */
+}
+
+/* Efecto al pasar el cursor */
+#search-input:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(199, 152, 16, 0.9); /* Sombra más profunda */
+    border-color: #ffd700; /* Efecto dorado más fuerte al pasar el mouse */
+}
+
+/* Efecto al hacer foco (focus) */
+#search-input:focus {
+    border-color: #ffdf00; /* Color dorado brillante al hacer foco */
+    background-color: #2a2a2a; /* Fondo un poco más claro para mayor contraste */
+    outline: none; /* Eliminar el contorno por defecto */
+    box-shadow: 0 0 25px rgba(255, 223, 0, 0.8); /* Brillo dorado alrededor */
+}
+
+/* Transiciones suaves para una experiencia de usuario de lujo */
+#search-input:focus, #search-input:hover {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Efecto de difuminado al hacer scroll */
+.hidden {
+    opacity: 0;
+}
+
+/* Medios responsivos */
+@media (min-width: 768px) {
+    #gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .game {
+        width: calc(33.333% - 20px); /* Ajuste dinámico según el tamaño de la pantalla */
+    }
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;    /* Color de fondo del footer */
+    padding: 20px 0;           /* Espaciado vertical dentro del footer */
+    text-align: center;        /* Centrar el contenido */
+}
+
+/* Contenedor de los iconos sociales */
+.social-container {
+    display: flex;             /* Flexbox para alinear horizontalmente */
+    justify-content: center;   /* Centra los elementos dentro del contenedor */
+    gap: 20px;                 /* Espaciado entre los iconos */
+}
+
+/* Estilo de los iconos sociales */
+.social-icon {
+    width: 40px;               /* Ancho de los iconos */
+    height: 40px;              /* Alto de los iconos */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.social-icon:hover {
+    transform: scale(1.2);     /* Efecto de agrandar los iconos al pasar el mouse */
+}
+
+
+/* TEXTO */
+
+p {
+    font-size: 20px; /* Tamaño de fuente mayor para destacar */
+    font-weight: bold; /* Negrita para mayor énfasis */
+    color: #f8f8f8; /* Color de texto claro para contrastar con el fondo oscuro */
+    background: linear-gradient(90deg, #3a3a3a, #1a1a1a); /* Fondo oscuro con degradado elegante */
+    padding: 15px 20px; /* Espaciado interno para que el texto respire */
+    border-radius: 10px; /* Bordes redondeados para un acabado limpio */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 10px rgba(255, 255, 255, 0.1); /* Sombras suaves para darle profundidad */
+    text-align: center; /* Centrado del texto */
+    letter-spacing: 1.5px; /* Espaciado entre letras para un aspecto más estilizado */
+    text-transform: uppercase; /* Texto en mayúsculas para un toque sofisticado */
+    margin: 20px auto; /* Centrado con márgenes */
+    width: fit-content; /* Ancho ajustado al contenido */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el mouse por encima del párrafo */
+p:hover {
+    color: #ffcc00; /* Color dorado claro al hacer hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 204, 0, 0.8); /* Sombra más profunda */
+    background: linear-gradient(90deg, #444, #222); /* Degradado ligeramente más claro al hacer hover */
+}
+
+
+/* Scrollbar total */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar */
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background: #ff0000; /* Color rojo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); /* Sombra interior */
+}
+
+/* Barra de desplazamiento al pasar el cursor */
+::-webkit-scrollbar-thumb:hover {
+    background: #cc0000; /* Color rojo más oscuro al pasar el cursor */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin; /* Grosor del scrollbar */
+    scrollbar-color: #ff0000 #f1f1f1; /* Color rojo de la barra de desplazamiento y color de fondo */
+}
+
+/* Internet Explorer y Edge */
+.scrollbar {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Scrollbar auto-ocultante */
+}
+
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+/* Estilos del botón flotante */
+.custom-floating-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #353535;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.custom-floating-button:hover {
+  background-color: #555;
+}
+
+/* Estilos del modal */
+.custom-modal {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 100%;
+  max-width: 300px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.custom-modal.open {
+  transform: scale(1);
+}
+
+.custom-modal.hidden {
+  transform: scale(0);
+}
+
+/* Estilos de la tarjeta dentro del modal */
+.custom-card {
+  padding: 10px;
+  background: #353535;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-image: url('URL_DE_TU_IMAGEN'); /* Añade la URL de tu imagen */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.custom-textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-textContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.custom-span {
+  font-size: 12px;
+  color: #ddd;
+}
+
+.custom-p {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+
+/*DMCA BUTTON*/
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+}
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
