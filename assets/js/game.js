@@ -35,7 +35,7 @@ function addGameToGallery({id, imgSrc, altText, title, downloadLink2}) {
     gameDiv.innerHTML = `
         <img src="${imgSrc}" alt="${altText}">
         <p>${title}</p>
-        <button onclick="window.location.href='${downloadLink2}'">Qiwi</button>
+        <button onclick="window.location.href='${downloadLink2}'">Descargar 🌐</button>
     `;
 
     gallery.appendChild(gameDiv);
