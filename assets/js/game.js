@@ -151,12 +151,13 @@ function addGameToGallery({id, imgSrc, altText, title, downloadLink2}) {
     // Crear imagen optimizada
     const optimizedImg = createOptimizedImage(imgSrc, altText, title);
     
-    // Crear elementos restantes con estilos optimizados
+    // Crear elementos restantes con estilos optimizados y centrados
     const titleP = document.createElement('p');
     titleP.textContent = title;
     titleP.style.margin = '10px 0';
     titleP.style.fontSize = '16px';
     titleP.style.fontWeight = 'bold';
+    titleP.style.textAlign = 'center'; // Centrar texto en todos los dispositivos
     
     const downloadBtn = document.createElement('button');
     downloadBtn.textContent = 'Descargar 🌐';
@@ -167,6 +168,8 @@ function addGameToGallery({id, imgSrc, altText, title, downloadLink2}) {
     downloadBtn.style.borderRadius = '5px';
     downloadBtn.style.cursor = 'pointer';
     downloadBtn.style.transition = 'background-color 0.2s ease, transform 0.1s ease';
+    downloadBtn.style.display = 'block';
+    downloadBtn.style.margin = '0 auto'; // Centrar botón
     
     // Efectos hover con JavaScript
     downloadBtn.addEventListener('mouseenter', function() {
@@ -306,6 +309,24 @@ function setupVisibilityOptimization() {
     }
 }
 
+// Función para centrar títulos existentes en la página
+function centerExistingTitles() {
+    // Centrar todos los párrafos de títulos de juegos existentes
+    document.querySelectorAll('.game p').forEach(titleP => {
+        titleP.style.textAlign = 'center';
+    });
+    
+    // Centrar títulos principales si existen
+    document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+        heading.style.textAlign = 'center';
+    });
+    
+    // Centrar otros elementos de texto específicos si los hay
+    document.querySelectorAll('.title, .game-title, .content-title').forEach(title => {
+        title.style.textAlign = 'center';
+    });
+}
+
 // Inicializar optimizaciones cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     // Guardar el observer globalmente para usar en nuevos elementos
@@ -315,6 +336,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.game').forEach(game => {
         applyGameOptimizations(game);
     });
+    
+    // Centrar títulos existentes
+    centerExistingTitles();
     
     // Optimizar imagen principal si existe
     const mainImage = document.querySelector("#main-image img");
@@ -327,4 +351,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ejemplo: preloadCriticalImages(['imagen1.jpg', 'imagen2.jpg']);
     
     console.log('✅ Optimizaciones de renderizado aplicadas exitosamente');
+    console.log('✅ Centrado de texto aplicado en todos los dispositivos');
 });
