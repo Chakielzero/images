@@ -161,7 +161,7 @@ function addGameToGallery({id, imgSrc, altText, title, downloadLink2}) {
     const downloadBtn = document.createElement('button');
     downloadBtn.textContent = 'Descargar 🌐';
     downloadBtn.style.padding = '10px 20px';
-    downloadBtn.style.backgroundColor = '#007bff';
+    downloadBtn.style.backgroundColor = '#dc2626';
     downloadBtn.style.color = 'white';
     downloadBtn.style.border = 'none';
     downloadBtn.style.borderRadius = '5px';
