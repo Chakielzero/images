@@ -160,7 +160,7 @@ function addGameToGallery({id, imgSrc, altText, title, downloadLink2}) {
     titleP.style.textAlign = 'center'; // Centrar texto en todos los dispositivos
     
     const downloadBtn = document.createElement('button');
-    downloadBtn.textContent = 'Descargar 🌐';
+    downloadBtn.textContent = 'Descargar';
     downloadBtn.style.padding = '10px 20px';
     downloadBtn.style.backgroundColor = '#dc2626';
     downloadBtn.style.color = 'white';
